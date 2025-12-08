@@ -1,0 +1,208 @@
+/* Variables de couleur */
+:root {
+    --color-primary: #f4f4f8; /* Blanc cassé pour le texte principal */
+    --color-secondary: #133966; /* Bleu marine foncé du fond */
+    --color-accent: #6c757d; /* Gris pour les sous-textes */
+    --color-btn: #1F9DFF; /* Violet pour le bouton Commencer */
+    --color-mano-mano: #33a8ff; /* Bleu/vert du logo ManoMano */
+}
+
+/* Styles généraux */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img{
+    border-radius: 10px;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: var(--color-btn);
+}
+
+/* --- Barre de navigation (Header) --- */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 50px;
+    background-color: var(--color-primary); /* Assure que le header est sur le fond */
+}
+
+nav a {
+    margin-left: 25px;
+    font-weight: 300;
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+/* --- Section accueil de la page --- */
+.accueil {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 50px 100px 50px;
+    background-color: var(--color-secondary);
+    position: relative;
+    overflow: hidden; /* Pour contenir les graphiques */
+}
+
+.accueil-content {
+    max-width: 50%;
+}
+
+.accueil h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    margin-left: 50px;
+}
+
+.accueil p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    margin-left: 50px;
+    font-weight: 300;
+}
+
+.btn-commencer {
+    display: inline-block;
+    background-color: var(--color-btn);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    margin-right: 20px;
+    font-weight: 600;
+    margin-left: 50px;
+}
+
+.social-links-accueil i {
+    font-size: 1.8rem;
+    margin-right: 15px;
+    color: var(--color-secondary);
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 8px;
+    border-radius: 50%;
+    /* Pour la forme d'icône spécifique, ajustez le padding et la taille */
+}
+
+.social-links-accueil {
+    display: inline-flex;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#icon{
+    height: 40px;
+    width: 40px;
+}
+
+/* --- Graphiques --- */
+.accueil-graphics {
+    position: relative;
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.logo-mano-mano {
+    position: absolute;
+    top: 25%; /* Ajustez selon le positionnement souhaité */
+    left: -10%;
+    width: 400px; /* Taille approximative */
+    
+}
+
+.graphic-design {
+    border-radius: 10px;
+    padding: 20px;
+    position: relative;
+    width: 300px; /* Largeur de la boite des circuits */
+    height: 180px; /* Hauteur de la boite des circuits */
+    margin-top: 50px;
+}
+
+.outils_web {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 120%; /* Ajuster la taille de l'image de circuit */
+    /* Dans le vrai code, ce serait une image de circuit */
+}
+
+.image-iris {
+    width: 350px; /* Taille de l'image IRIS */
+    position: absolute;
+    bottom: -80px; /* Déborde en bas de la section accueil */
+    right: 150px; /* Positionnement à droite */
+    z-index: 10;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Ombre pour donner du relief */
+}
+
+/* --- Section présentation --- */
+.presentation{
+    display: flex;
+    padding: 50px 50px 100px 50px;
+    background-color: var(--color-primary);
+    position: relative;
+    overflow: hidden; /* Pour contenir les graphiques */
+    color: black;
+    justify-content: center;
+    text-align: center;
+}
+
+
+
+.presentation h2{
+    font-size : 50px;
+    padding: 30px;
+}
+
+.presentation h3{
+    font-size: 25px;
+    font-weight: normal;
+}
+
+.presentation h4{
+    font-size: 25px;
+    padding: 30px;
+}
+
+.presentation p{
+    font-size: 18px;
+}
+
+/* --- Section parcours --- */
+
+/* --- Pied de page (Footer) --- */
+.footer-social-links {
+    padding: 20px ;
+    background-color: var(--color-primary);
+    display: flex;
+    justify-content: flex-start; /* Aligner à gauche */
+}
+
+.footer-social-links a {
+    margin-right: 15px;
+}
+
+.footer-social-links i {
+    font-size: 1.5rem;
+    color: var(--color-secondary);
+}

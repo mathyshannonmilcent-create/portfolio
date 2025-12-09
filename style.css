@@ -31,7 +31,7 @@ a {
 }
 
 a:hover {
-    color: var(--color-btn);
+    color: #133966;
 }
 
 /* --- Barre de navigation (Header) --- */
@@ -84,7 +84,7 @@ nav a {
     background-color: var(--color-btn);
     color: white;
     padding: 10px 30px;
-    border-radius: 5px;
+    border-radius: 50px;
     margin-right: 20px;
     font-weight: 600;
     margin-left: 50px;
@@ -158,16 +158,13 @@ nav a {
 /* --- Section présentation --- */
 .presentation{
     display: flex;
-    padding: 50px 50px 100px 50px;
+    padding: 30px 50px 100px 50px;
     background-color: var(--color-primary);
     position: relative;
-    overflow: hidden; /* Pour contenir les graphiques */
     color: black;
     justify-content: center;
     text-align: center;
 }
-
-
 
 .presentation h2{
     font-size : 50px;
@@ -189,6 +186,47 @@ nav a {
 }
 
 /* --- Section parcours --- */
+
+.parcours{
+    display: flex;
+    padding: 50px 50px 50px 50px;
+    background-color: var(--color-secondary);
+    position: relative;
+    color: white;
+    justify-content: center;
+    text-align: center;
+}
+
+.parcours h4{
+    font-size: 25px;
+}
+.col-pro{
+    flex: 50%;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.col-sco{
+    flex: 50%;
+    text-align: left;
+    margin-left: 100px;
+}
+
+.btn-cv-container{
+    margin-top: -100px;
+    margin-bottom: 75px;
+    background-color: var(--color-secondary);
+    position: relative;
+}
+.btn-cv {
+    background-color: var(--color-btn);
+    color: white;
+    padding: 10px 30px;
+    border-radius: 50px;
+    margin-right: 20px;
+    font-weight: 600;
+    margin-left: 150px;
+}
 
 /* --- Pied de page (Footer) --- */
 .footer-social-links {

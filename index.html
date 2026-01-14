@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Mathys Hannon Milcent</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <div class="conteneur">
+            <nav>
+                <div class="logo">MHM.</div>
+                <ul>
+                    <li><a href="#accueil">Accueil</a></li>
+                    <li><a href="#presentation">Présentation</a></li>
+                    <li><a href="#formation">Formation</a></li>
+                    <li><a href="#projets">Projets</a></li>
+                    <li><a href="#veille">Veille technologique</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="accueil">
+        <h1>Portfolio de Mathys Hannon Milcent</h1>
+        <p>Bienvenue sur mon portfolio</p>
+        <a href="#presentation" class="btn-commencer">Commencer</a>
+    </section>
+
+    <section id="presentation" class="section-padding">
+        <div class="conteneur">
+            <h2>À propos de moi</h2>
+            <p>Bonjour, je suis étudiant en BTS SIO option SLAM. Passionné par le développement informatique et les nouvelles technologies, je souhaite me spécialiser dans la conception d'applications web et logicielles.</p>
+            
+            <div class="grille-parcours">
+                <div class="boite-parcours">
+                    <h3>Parcours Professionnel</h3>
+                    <ul class="liste-activites">
+                        <li><strong>2022 - Job d'été :</strong> Manutentionnaire chez [Nom]</li>
+                        <li><strong>2023 - Stage :</strong> Découverte informatique chez [Nom]</li>
+                        <li><strong>2024 - Alternance :</strong> Développeur Junior chez [Entreprise Actuelle]</li>
+                    </ul>
+                </div>
+
+                <div class="boite-parcours">
+                    <h3>Parcours Scolaire</h3>
+                    <ul class="liste-activites">
+                        <li><strong>2021 :</strong> Brevet des collèges</li>
+                        <li><strong>2024 :</strong> Baccalauréat Général (Spécialités Maths/NSI)</li>
+                        <li><strong>2024 - Aujourd'hui :</strong> BTS SIO - Lycée [Nom]</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="entreprise-section">
+                <h3>Mon Entreprise : [Nom de l'entreprise]</h3>
+                <p>Mon entreprise d'accueil est spécialisée dans le développement de solutions SaaS pour le secteur de la logistique.</p>
+                <br>
+                <h4>Mon rôle</h4>
+                <p>Au sein de l'équipe technique, je suis en charge du développement de modules front-end et de la maintenance de la base de données.</p>
+                
+                <div class="photos-entreprise">
+                    <div class="photo-placeholder">Photo Locaux</div>
+                    <div class="photo-placeholder">Photo Bureau</div>
+                    <div class="photo-placeholder">Photo Équipe</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation" class="section-padding">
+        <div class="conteneur">
+            <h2>Ma Formation : BTS SIO</h2>
+            <p>Le BTS Services Informatiques aux Organisations est un diplôme reconnu par l'état qui forme des professionnels de l'informatique en deux ans.</p>
+            
+            <div class="options-sio">
+                <div class="colonne-option">
+                    <h3>Option SLAM</h3>
+                    <p>Solutions Logicielles et Applications Métiers. Cette option est orientée vers le développement (Java, PHP, C#, Python).</p>
+                    <br>
+                    <strong>Débouchés :</strong>
+                    <ul>
+                        <li>- Développeur Web / Mobile</li>
+                        <li>- Analyste Programmeur</li>
+                        <li>- Intégrateur Web</li>
+                    </ul>
+                </div>
+
+                <div class="colonne-option">
+                    <h3>Option SISR</h3>
+                    <p>Solutions d'Infrastructure, Systèmes et Réseaux. Cette option se concentre sur l'administration réseau et la cybersécurité.</p>
+                    <br>
+                    <strong>Débouchés :</strong>
+                    <ul>
+                        <li>- Administrateur Réseau</li>
+                        <li>- Technicien Support</li>
+                        <li>- Expert Cybersécurité</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projets" class="section-padding">
+        <div class="conteneur">
+            <h2>Mes Projets (E4)</h2>
+            <div class="grille-cartes">
+                
+                <div class="carte" onclick="ouvrirModal('modal-projet-1')">
+                    <div class="carte-header"><i class="fas fa-code"></i></div>
+                    <div class="carte-corps">
+                        <h3>Site E-commerce</h3>
+                        <p>Cliquez pour voir les détails.</p>
+                    </div>
+                </div>
+
+                <div class="carte" onclick="ouvrirModal('modal-projet-2')">
+                    <div class="carte-header"><i class="fas fa-database"></i></div>
+                    <div class="carte-corps">
+                        <h3>Gestion de Stock</h3>
+                        <p>Cliquez pour voir les détails.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-projet-1" class="modal">
+        <div class="modal-contenu">
+            <span class="fermer-modal" onclick="fermerModal('modal-projet-1')">&times;</span>
+            <h2>Projet : Site E-commerce</h2>
+            <p><strong>Technologies :</strong> HTML, CSS, PHP, MySQL.</p>
+            <p>Ce projet consistait à créer une boutique en ligne complète avec gestion du panier et espace administrateur.</p>
+            <div class="photo-placeholder" style="width:100%; height:200px; margin-top:10px;">Capture d'écran</div>
+        </div>
+    </div>
+
+    <div id="modal-projet-2" class="modal">
+        <div class="modal-contenu">
+            <span class="fermer-modal" onclick="fermerModal('modal-projet-2')">&times;</span>
+            <h2>Projet : Gestion de Stock</h2>
+            <p><strong>Technologies :</strong> C#, SQL Server.</p>
+            <p>Application lourde permettant de gérer les entrées et sorties de produits dans un entrepôt.</p>
+            <div class="photo-placeholder" style="width:100%; height:200px; margin-top:10px;">Capture d'écran</div>
+        </div>
+    </div>
+
+    <section id="veille" class="section-padding" style="background-color: white;">
+        <div class="conteneur">
+            <h2>Veille Technologique (E5)</h2>
+            <p>Thème : L'intelligence artificielle dans le développement web.</p>
+            <div class="grille-cartes">
+                
+                <div class="carte" onclick="ouvrirModal('modal-veille-1')">
+                    <div class="carte-header" style="background-color: var(--couleur-secondaire);"><i class="fas fa-newspaper"></i></div>
+                    <div class="carte-corps">
+                        <h3>L'impact de ChatGPT</h3>
+                        <p>Résumé de l'article sur l'IA générative.</p>
+                    </div>
+                </div>
+                 <div class="carte" onclick="ouvrirModal('modal-veille-2')">
+                    <div class="carte-header" style="background-color: var(--couleur-secondaire);"><i class="fas fa-robot"></i></div>
+                    <div class="carte-corps">
+                        <h3>GitHub Copilot</h3>
+                        <p>L'aide au codage en temps réel.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <div id="modal-veille-1" class="modal">
+        <div class="modal-contenu">
+            <span class="fermer-modal" onclick="fermerModal('modal-veille-1')">&times;</span>
+            <h2>L'impact de ChatGPT sur le code</h2>
+            <p>Cet article explique comment les développeurs utilisent l'IA pour générer du code boilerplate.</p>
+            <a href="#" class="btn-lien">Lire l'article complet</a>
+        </div>
+    </div>
+    
+    <div id="modal-veille-2" class="modal">
+        <div class="modal-contenu">
+            <span class="fermer-modal" onclick="fermerModal('modal-veille-2')">&times;</span>
+            <h2>GitHub Copilot</h2>
+            <p>Analyse de l'outil de Microsoft et son intégration dans VS Code.</p>
+            <a href="#" class="btn-lien">Lire l'article complet</a>
+        </div>
+    </div>
+
+    <section id="contact" class="section-padding">
+        <div class="conteneur">
+            <h2>Me Contacter</h2>
+            <div class="icones-contact">
+                <a href="https://www.linkedin.com" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="mailto:tonemail@exemple.com"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <button onclick="remonterEnHaut()" id="btn-retour-haut" title="Retour en haut">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+</html>

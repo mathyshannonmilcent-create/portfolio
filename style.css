@@ -1,0 +1,337 @@
+/* --- VARIABLES ET COULEURS --- */
+:root {
+    --couleur-principale: #2c3e50; /* Bleu nuit */
+    --couleur-secondaire: #1abc9c; /* Cyan/Turquoise */
+    --couleur-fond: #ecf0f1;       /* Gris très clair */
+    --couleur-texte: #333;
+}
+
+/* --- CONFIGURATION GÉNÉRALE --- */
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.6;
+}
+
+h1, h2, h3 {
+    color: var(--couleur-principale);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Classes utilitaires */
+.conteneur {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-padding {
+    padding: 80px 0;
+}
+
+/* --- HEADER (MENU) --- */
+header {
+    background-color: var(--couleur-principale);
+    color: white;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+nav ul {
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--couleur-secondaire);
+}
+
+/* --- SECTION ACCUEIL --- */
+#accueil {
+    height: 100vh;
+    background: linear-gradient(rgba(44, 62, 80, 0.9), rgba(44, 62, 80, 0.9)), url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#accueil h1 {
+    color: white;
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#accueil p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+}
+
+.btn-commencer {
+    padding: 12px 30px;
+    background-color: var(--couleur-secondaire);
+    color: white;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    transition: transform 0.3s;
+}
+
+.btn-commencer:hover {
+    transform: scale(1.05);
+    background-color: #16a085;
+}
+
+/* --- SECTION PRÉSENTATION --- */
+.grille-parcours {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.boite-parcours {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.liste-activites li {
+    border-bottom: 1px solid #eee;
+    padding: 10px 0;
+}
+
+.entreprise-section {
+    margin-top: 50px;
+    background: white;
+    padding: 30px;
+    border-radius: 8px;
+}
+
+.photos-entreprise {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.photo-placeholder {
+    width: 150px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #666;
+    font-size: 0.8rem;
+}
+
+/* --- SECTION FORMATION --- */
+#formation {
+    background-color: white;
+}
+
+.options-sio {
+    display: flex;
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.colonne-option {
+    flex: 1;
+    background-color: var(--couleur-fond);
+    padding: 20px;
+    border-radius: 8px;
+    border-left: 5px solid var(--couleur-secondaire);
+}
+
+/* --- SECTIONS PROJETS & VEILLE --- */
+.grille-cartes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 30px;
+}
+
+.carte {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    cursor: pointer;
+}
+
+.carte:hover {
+    transform: translateY(-5px);
+}
+
+.carte-header {
+    height: 150px;
+    background-color: var(--couleur-principale);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 3rem;
+}
+
+.carte-corps {
+    padding: 20px;
+}
+
+.carte-corps h3 {
+    margin-bottom: 10px;
+}
+
+/* --- MODALES --- */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.8);
+    backdrop-filter: blur(5px);
+}
+
+.modal-contenu {
+    background-color: #fefefe;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    position: relative;
+    animation: animatetop 0.4s;
+}
+
+@keyframes animatetop {
+    from {top: -300px; opacity: 0}
+    to {top: 0; opacity: 1}
+}
+
+.fermer-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fermer-modal:hover {
+    color: black;
+}
+
+.btn-lien {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: var(--couleur-principale);
+    color: white;
+    border-radius: 5px;
+}
+
+/* --- CONTACT --- */
+#contact {
+    background-color: var(--couleur-principale);
+    color: white;
+    text-align: center;
+}
+
+#contact h2 {
+    color: white;
+}
+
+.icones-contact {
+    font-size: 3rem;
+    margin-top: 20px;
+}
+
+.icones-contact a {
+    color: white;
+    margin: 0 20px;
+    transition: color 0.3s;
+}
+
+.icones-contact a:hover {
+    color: var(--couleur-secondaire);
+}
+
+/* --- BOUTON RETOUR HAUT --- */
+#btn-retour-haut {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 99;
+    border: none;
+    outline: none;
+    background-color: var(--couleur-secondaire);
+    color: white;
+    cursor: pointer;
+    padding: 15px;
+    border-radius: 50%;
+    font-size: 18px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+    display: none; /* Caché par défaut via CSS, géré par JS ensuite */
+}
+
+#btn-retour-haut:hover {
+    background-color: #555;
+}
+
+/* --- RESPONSIVE MOBILE --- */
+@media screen and (max-width: 768px) {
+    .grille-parcours, .options-sio {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    nav ul {
+        display: none; /* A remplacer par un menu burger idéalement */
+    }
+    .modal-contenu {
+        width: 95%;
+    }
+}
